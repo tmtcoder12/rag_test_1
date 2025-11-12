@@ -1,0 +1,79 @@
+Here are some following questions I will be using to test my RAG System:
+
+Direct lookups (factual):
+Does Emily Chen have any medication allergies?
+(answer: Penecillin)
+What inhalers does Emily Chen currently use?
+(answer: Albuterol inhaler PRN)
+On 2023-12-18, why did Emily Chen visit the clinic?
+(answer: Fatigue and poor sleep)
+What dose of lisinopril is David Morales prescribed initially?
+(answer: 20mg lisinopril daily)
+What was David Morales’s LDL result at his 2023-12-05 visit?
+(answer: LDL 142mg/dL)
+What antibiotic was prescribed for Sofia Rodriguez’s sore throat on 2023-02-15?
+(answer: Amoxicillin x10 days)
+What is Michael Turner’s documented allergy?
+(answer: Ibuprofen (stomach upset))
+What medication does Aisha Patel take for anxiety, and at what dose?
+(answer: Sertraline 50 mg daily)
+Which patient has a shellfish allergy and what type of allergy?
+(answer: Robert Kim,, anaphylaxis)
+Which patient is on metformin and why?
+(answer: Grace Liu, diabetes)
+
+Paraphrase / synonyms:
+Did Emily report breathing issues during allergy season?
+(answer: yes 2023-03-03)
+Has David’s blood pressure management improved by 2025?
+(answer: yes I would say so. His BP average in 2023 was 145/90, and, in 2025, his BP was 124/78)
+Was Sofia’s January 2025 cough likely bacterial or post-viral?
+(Open eneded answer [I have no idea])
+Did Michael receive guidance about weight management in late 2024?
+(answer: yes)
+Did Hannah’s headache frequency decrease by April 2024?
+(answer: yes. First was 5x a week, then reported less headaches)
+
+Date-bounded queries:
+What were Emily Chen’s plans at the 2024-03-25 check-up?
+(answer: Continue montelukast; prescribe low-potency steroid cream for eczema.)
+What changes were made to David’s statin therapy on 2023-12-05?
+(answer: Increase atorvastatin to 20 mg nightly;)
+What was the assessment for Sofia’s 2024-01-20 ear pain visit?
+(answer: Acute otitis media.)
+What was Michael’s A1C and assessment on 2024-03-02?
+(answer: A1C 5.8%)
+What interventions were recorded for Hannah on 2025-01-08?
+(answer: Blue-light glasses; take breaks; maintain hydration.)
+
+Multi-hop / aggregation:
+List all vaccines administered across these records by patient and date.
+(answer: Emily Chen -> Flu vaccine [2024-10-09],
+ David Morales -> Flu vaccine [2025-01-12],
+ Michael Turner -> Flu vaccine [2024-10-30],
+ Daniel Nguyen -> Flu vaccine [2024-11-27])
+For Marcus Brown, provide me the progression of his back pain.
+(answer: pain immproved, back pain stable)
+Which patients received antibiotics, what for, and when. 
+(I don't even know if there are any antibiotics)
+Identify all documented lifestyle recommendations (diet, exercise, sleep) by patient.
+
+Negation / contrast:
+Which patients explicitly have no documented allergies?
+Did Sofia ever present with fever at the 2025-01-03 visit?
+Was Hannah ever documented to have visual aura with migraines?
+
+Entity & value extraction:
+Extract all medication names and doses for Aisha across her timeline.
+Pull every lab value mentioned (LDL, A1C, glucose) with dates and patients.
+List all family-history conditions per patient.
+
+“Find the best source chunk”:
+Where (which note) is “exercise-induced bronchospasm” mentioned, and what plan follows it?
+Find the note that contains “HEPA air filter”; which patient and visit is it?
+Locate the record with “digital eye strain”; what was the plan?
+
+Safety/edge cases (should return “not found”):
+Which patient is prescribed insulin?
+Do any records mention hospitalization or ER admission?
+Are there any documented medication side effects besides allergies?

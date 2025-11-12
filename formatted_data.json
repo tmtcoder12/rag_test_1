@@ -1,0 +1,287 @@
+[
+  {
+    "id": "FAM2025-001_2023-03-03",
+    "patient_id": "FAM2025-001",
+    "text": "Patient_ID: FAM2025-001, Name: Emily Chen, Age: 32, Gender: Female, Occupation: Software Engineer, Allergies: Penicillin (rash), Past_Medical_History: Mild asthma, Seasonal allergies, Family_History: Mother: Type 2 diabetes; Father: Hypertension, Current_Medications: Albuterol inhaler PRN, Montelukast 10 mg nightly, Visit_Date: 2023-03-03, Reason_for_Visit: Annual physical, Notes: Reports feeling well overall. Exercises regularly, occasional shortness of breath during spring pollen season., Assessment: Mild persistent asthma; overall good control., Plan: Continue montelukast nightly; renew albuterol inhaler; advise use of HEPA air filter at home; schedule spirometry next visit."
+  },
+  {
+    "id": "FAM2025-001_2023-06-10",
+    "patient_id": "FAM2025-001",
+    "text": "Patient_ID: FAM2025-001, Name: Emily Chen, Age: 32, Gender: Female, Occupation: Software Engineer, Allergies: Penicillin (rash), Past_Medical_History: Mild asthma, Seasonal allergies, Family_History: Mother: Type 2 diabetes; Father: Hypertension, Current_Medications: Albuterol inhaler PRN, Montelukast 10 mg nightly, Visit_Date: 2023-06-10, Reason_for_Visit: Wheezing after hiking trip, Notes: Chest tightness after hiking; used inhaler twice. No cough or fever., Assessment: Exercise-induced bronchospasm triggered by dust exposure., Plan: Add budesonide inhaler for 2 weeks; advise pre-exercise albuterol use; wear mask in dusty areas."
+  },
+  {
+    "id": "FAM2025-001_2023-12-18",
+    "patient_id": "FAM2025-001",
+    "text": "Patient_ID: FAM2025-001, Name: Emily Chen, Age: 32, Gender: Female, Occupation: Software Engineer, Allergies: Penicillin (rash), Past_Medical_History: Mild asthma, Seasonal allergies, Family_History: Mother: Type 2 diabetes; Father: Hypertension, Current_Medications: Albuterol inhaler PRN, Montelukast 10 mg nightly, Visit_Date: 2023-12-18, Reason_for_Visit: Fatigue and poor sleep, Notes: Works late; averages 5 hours sleep; denies depression., Assessment: Sleep deprivation; rule out iron deficiency., Plan: Order CBC, iron, and thyroid tests; counsel on sleep hygiene; limit caffeine after noon."
+  },
+  {
+    "id": "FAM2025-001_2024-03-25",
+    "patient_id": "FAM2025-001",
+    "text": "Patient_ID: FAM2025-001, Name: Emily Chen, Age: 32, Gender: Female, Occupation: Software Engineer, Allergies: Penicillin (rash), Past_Medical_History: Mild asthma, Seasonal allergies, Family_History: Mother: Type 2 diabetes; Father: Hypertension, Current_Medications: Albuterol inhaler PRN, Montelukast 10 mg nightly, Visit_Date: 2024-03-25, Reason_for_Visit: Annual check-up, Notes: Improved energy after schedule change; labs normal; mild eczema on forearms., Assessment: Stable asthma; mild atopic dermatitis., Plan: Continue montelukast; prescribe low-potency steroid cream for eczema."
+  },
+  {
+    "id": "FAM2025-001_2024-10-09",
+    "patient_id": "FAM2025-001",
+    "text": "Patient_ID: FAM2025-001, Name: Emily Chen, Age: 32, Gender: Female, Occupation: Software Engineer, Allergies: Penicillin (rash), Past_Medical_History: Mild asthma, Seasonal allergies, Family_History: Mother: Type 2 diabetes; Father: Hypertension, Current_Medications: Albuterol inhaler PRN, Montelukast 10 mg nightly, Visit_Date: 2024-10-09, Reason_for_Visit: Flu shot and medication refill, Notes: No recent exacerbations; feeling well., Assessment: Asthma controlled., Plan: Administer flu vaccine; renew prescriptions; schedule next annual visit."
+  },
+  {
+    "id": "FAM2025-002_2023-01-09",
+    "patient_id": "FAM2025-002",
+    "text": "Patient_ID: FAM2025-002, Name: David Morales, Age: 54, Gender: Male, Occupation: Accountant, Allergies: None, Past_Medical_History: Hypertension, Hyperlipidemia, Family_History: Father: Heart attack at 62; Mother: Stroke at 68, Current_Medications: Lisinopril 20 mg daily, Atorvastatin 10 mg nightly, Visit_Date: 2023-01-09, Reason_for_Visit: Blood pressure follow-up, Notes: Home BP averages 145/90. No symptoms of dizziness or chest pain., Assessment: Hypertension not fully controlled., Plan: Increase lisinopril dose; encourage home BP logs; discuss low-sodium diet."
+  },
+  {
+    "id": "FAM2025-002_2023-07-07",
+    "patient_id": "FAM2025-002",
+    "text": "Patient_ID: FAM2025-002, Name: David Morales, Age: 54, Gender: Male, Occupation: Accountant, Allergies: None, Past_Medical_History: Hypertension, Hyperlipidemia, Family_History: Father: Heart attack at 62; Mother: Stroke at 68, Current_Medications: Lisinopril 20 mg daily, Atorvastatin 10 mg nightly, Visit_Date: 2023-07-07, Reason_for_Visit: Dizziness after new diet, Notes: Started intermittent fasting; occasional lightheadedness when standing., Assessment: Orthostatic hypotension secondary to fasting and medication., Plan: Adjust lisinopril timing; recommend smaller, frequent meals."
+  },
+  {
+    "id": "FAM2025-002_2023-12-05",
+    "patient_id": "FAM2025-002",
+    "text": "Patient_ID: FAM2025-002, Name: David Morales, Age: 54, Gender: Male, Occupation: Accountant, Allergies: None, Past_Medical_History: Hypertension, Hyperlipidemia, Family_History: Father: Heart attack at 62; Mother: Stroke at 68, Current_Medications: Lisinopril 20 mg daily, Atorvastatin 10 mg nightly, Visit_Date: 2023-12-05, Reason_for_Visit: Annual physical, Notes: Exercises 3x/week; compliant with meds; labs show LDL 142 mg/dL., Assessment: Hyperlipidemia suboptimally controlled., Plan: Increase atorvastatin to 20 mg nightly; recheck labs in 6 months."
+  },
+  {
+    "id": "FAM2025-002_2024-06-20",
+    "patient_id": "FAM2025-002",
+    "text": "Patient_ID: FAM2025-002, Name: David Morales, Age: 54, Gender: Male, Occupation: Accountant, Allergies: None, Past_Medical_History: Hypertension, Hyperlipidemia, Family_History: Father: Heart attack at 62; Mother: Stroke at 68, Current_Medications: Lisinopril 20 mg daily, Atorvastatin 10 mg nightly, Visit_Date: 2024-06-20, Reason_for_Visit: Left knee pain, Notes: Pain after jogging; mild swelling; no instability., Assessment: Patellofemoral pain syndrome., Plan: Rest, ice, and physiotherapy referral; NSAIDs as needed."
+  },
+  {
+    "id": "FAM2025-002_2025-01-12",
+    "patient_id": "FAM2025-002",
+    "text": "Patient_ID: FAM2025-002, Name: David Morales, Age: 54, Gender: Male, Occupation: Accountant, Allergies: None, Past_Medical_History: Hypertension, Hyperlipidemia, Family_History: Father: Heart attack at 62; Mother: Stroke at 68, Current_Medications: Lisinopril 20 mg daily, Atorvastatin 10 mg nightly, Visit_Date: 2025-01-12, Reason_for_Visit: Medication refill and flu shot, Notes: BP 124/78; cholesterol improved; feels well., Assessment: Hypertension and hyperlipidemia controlled., Plan: Continue regimen; administer flu vaccine; annual follow-up."
+  },
+  {
+    "id": "FAM2025-003_2023-02-15",
+    "patient_id": "FAM2025-003",
+    "text": "Patient_ID: FAM2025-003, Name: Sofia Rodriguez, Age: 7, Gender: Female, Occupation: N/A, Allergies: None, Past_Medical_History: Recurrent otitis media, Eczema (resolved), Family_History: None, Current_Medications: None, Visit_Date: 2023-02-15, Reason_for_Visit: Sore throat and fever, Notes: Temp 38.6°C; tonsils erythematous with exudate., Assessment: Streptococcal pharyngitis., Plan: Amoxicillin x10 days; increase fluids; change toothbrush after 3 days."
+  },
+  {
+    "id": "FAM2025-003_2023-06-30",
+    "patient_id": "FAM2025-003",
+    "text": "Patient_ID: FAM2025-003, Name: Sofia Rodriguez, Age: 7, Gender: Female, Occupation: N/A, Allergies: None, Past_Medical_History: Recurrent otitis media, Eczema (resolved), Family_History: None, Current_Medications: None, Visit_Date: 2023-06-30, Reason_for_Visit: Rash on arms, Notes: Pruritic red papules after playing outdoors; no fever., Assessment: Contact dermatitis (likely poison ivy)., Plan: Topical hydrocortisone; oral antihistamine; educate on plant avoidance."
+  },
+  {
+    "id": "FAM2025-003_2024-01-20",
+    "patient_id": "FAM2025-003",
+    "text": "Patient_ID: FAM2025-003, Name: Sofia Rodriguez, Age: 7, Gender: Female, Occupation: N/A, Allergies: None, Past_Medical_History: Recurrent otitis media, Eczema (resolved), Family_History: None, Current_Medications: None, Visit_Date: 2024-01-20, Reason_for_Visit: Ear pain and congestion, Notes: Left TM bulging; nasal congestion., Assessment: Acute otitis media., Plan: Azithromycin 5-day course; follow-up if no improvement."
+  },
+  {
+    "id": "FAM2025-003_2024-08-12",
+    "patient_id": "FAM2025-003",
+    "text": "Patient_ID: FAM2025-003, Name: Sofia Rodriguez, Age: 7, Gender: Female, Occupation: N/A, Allergies: None, Past_Medical_History: Recurrent otitis media, Eczema (resolved), Family_History: None, Current_Medications: None, Visit_Date: 2024-08-12, Reason_for_Visit: Annual school physical, Notes: Healthy growth; active in soccer; normal vision and hearing., Assessment: Healthy child exam., Plan: Continue balanced diet; safety and dental hygiene counseling."
+  },
+  {
+    "id": "FAM2025-003_2025-01-03",
+    "patient_id": "FAM2025-003",
+    "text": "Patient_ID: FAM2025-003, Name: Sofia Rodriguez, Age: 7, Gender: Female, Occupation: N/A, Allergies: None, Past_Medical_History: Recurrent otitis media, Eczema (resolved), Family_History: None, Current_Medications: None, Visit_Date: 2025-01-03, Reason_for_Visit: Cough for 2 weeks, Notes: Dry cough, no fever or wheeze; lungs clear., Assessment: Post-viral cough syndrome., Plan: Reassurance; honey before bed; humidifier; follow-up if worsens."
+  },
+  {
+    "id": "FAM2025-004_2023-02-01",
+    "patient_id": "FAM2025-004",
+    "text": "Patient_ID: FAM2025-004, Name: Michael Turner, Age: 45, Gender: Male, Occupation: Delivery driver, Allergies: Ibuprofen (stomach upset), Past_Medical_History: GERD, Lower back strain, Obesity, Family_History: Brother: Type 2 diabetes, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2023-02-01, Reason_for_Visit: Heartburn and regurgitation, Notes: Eats late dinners; drinks 3 cups of coffee daily; reports burning chest discomfort., Assessment: Gastroesophageal reflux disease (GERD)., Plan: Start omeprazole; avoid caffeine and late meals; elevate head of bed."
+  },
+  {
+    "id": "FAM2025-004_2023-05-14",
+    "patient_id": "FAM2025-004",
+    "text": "Patient_ID: FAM2025-004, Name: Michael Turner, Age: 45, Gender: Male, Occupation: Delivery driver, Allergies: Ibuprofen (stomach upset), Past_Medical_History: GERD, Lower back strain, Obesity, Family_History: Brother: Type 2 diabetes, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2023-05-14, Reason_for_Visit: Lower back pain after lifting, Notes: Lumbar tenderness, no radiating pain; no neurological deficits., Assessment: Acute lumbar strain., Plan: Rest and heat therapy; prescribe cyclobenzaprine; stretching exercises."
+  },
+  {
+    "id": "FAM2025-004_2023-09-20",
+    "patient_id": "FAM2025-004",
+    "text": "Patient_ID: FAM2025-004, Name: Michael Turner, Age: 45, Gender: Male, Occupation: Delivery driver, Allergies: Ibuprofen (stomach upset), Past_Medical_History: GERD, Lower back strain, Obesity, Family_History: Brother: Type 2 diabetes, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2023-09-20, Reason_for_Visit: Routine check-up, Notes: Weight 103 kg; BMI 32; reports poor exercise habits., Assessment: Obesity and sedentary lifestyle., Plan: Discuss diet modification; recommend walking 30 min/day; order fasting labs."
+  },
+  {
+    "id": "FAM2025-004_2024-03-02",
+    "patient_id": "FAM2025-004",
+    "text": "Patient_ID: FAM2025-004, Name: Michael Turner, Age: 45, Gender: Male, Occupation: Delivery driver, Allergies: Ibuprofen (stomach upset), Past_Medical_History: GERD, Lower back strain, Obesity, Family_History: Brother: Type 2 diabetes, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2024-03-02, Reason_for_Visit: Lab follow-up, Notes: Fasting glucose 110 mg/dL, A1C 5.8%., Assessment: Prediabetes., Plan: Refer to dietitian; encourage 5–7% weight loss; monitor A1C in 6 months."
+  },
+  {
+    "id": "FAM2025-004_2024-10-30",
+    "patient_id": "FAM2025-004",
+    "text": "Patient_ID: FAM2025-004, Name: Michael Turner, Age: 45, Gender: Male, Occupation: Delivery driver, Allergies: Ibuprofen (stomach upset), Past_Medical_History: GERD, Lower back strain, Obesity, Family_History: Brother: Type 2 diabetes, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2024-10-30, Reason_for_Visit: Flu shot and follow-up, Notes: Lost 5 kg since March; GERD stable; improved energy., Assessment: Improved metabolic health; GERD well controlled., Plan: Continue omeprazole; administer flu shot; reinforce weight management."
+  },
+  {
+    "id": "FAM2025-005_2023-04-10",
+    "patient_id": "FAM2025-005",
+    "text": "Patient_ID: FAM2025-005, Name: Aisha Patel, Age: 28, Gender: Female, Occupation: Elementary school teacher, Allergies: None, Past_Medical_History: Mild anxiety, Iron deficiency anemia, Family_History: Mother: Thyroid disorder, Current_Medications: Sertraline 50 mg daily, Ferrous sulfate 325 mg every other day, Visit_Date: 2023-04-10, Reason_for_Visit: Anxiety follow-up, Notes: Reports improved mood; mild fatigue persists., Assessment: Generalized anxiety disorder, stable., Plan: Continue sertraline; recheck CBC for anemia."
+  },
+  {
+    "id": "FAM2025-005_2023-08-19",
+    "patient_id": "FAM2025-005",
+    "text": "Patient_ID: FAM2025-005, Name: Aisha Patel, Age: 28, Gender: Female, Occupation: Elementary school teacher, Allergies: None, Past_Medical_History: Mild anxiety, Iron deficiency anemia, Family_History: Mother: Thyroid disorder, Current_Medications: Sertraline 50 mg daily, Ferrous sulfate 325 mg every other day, Visit_Date: 2023-08-19, Reason_for_Visit: Fatigue and hair thinning, Notes: Sleeping well; iron previously low., Assessment: Recurrent iron deficiency anemia., Plan: Restart iron supplement; review iron-rich diet."
+  },
+  {
+    "id": "FAM2025-005_2024-01-12",
+    "patient_id": "FAM2025-005",
+    "text": "Patient_ID: FAM2025-005, Name: Aisha Patel, Age: 28, Gender: Female, Occupation: Elementary school teacher, Allergies: None, Past_Medical_History: Mild anxiety, Iron deficiency anemia, Family_History: Mother: Thyroid disorder, Current_Medications: Sertraline 50 mg daily, Ferrous sulfate 325 mg every other day, Visit_Date: 2024-01-12, Reason_for_Visit: Cough and nasal congestion, Notes: Mild URI symptoms; afebrile; lungs clear., Assessment: Viral upper respiratory infection., Plan: Supportive care: rest, fluids, acetaminophen PRN."
+  },
+  {
+    "id": "FAM2025-005_2024-06-22",
+    "patient_id": "FAM2025-005",
+    "text": "Patient_ID: FAM2025-005, Name: Aisha Patel, Age: 28, Gender: Female, Occupation: Elementary school teacher, Allergies: None, Past_Medical_History: Mild anxiety, Iron deficiency anemia, Family_History: Mother: Thyroid disorder, Current_Medications: Sertraline 50 mg daily, Ferrous sulfate 325 mg every other day, Visit_Date: 2024-06-22, Reason_for_Visit: Annual physical, Notes: Practicing yoga 3x/week; mood stable; labs normal., Assessment: Anxiety and anemia well controlled., Plan: Continue regimen; follow-up in 6 months."
+  },
+  {
+    "id": "FAM2025-005_2025-02-02",
+    "patient_id": "FAM2025-005",
+    "text": "Patient_ID: FAM2025-005, Name: Aisha Patel, Age: 28, Gender: Female, Occupation: Elementary school teacher, Allergies: None, Past_Medical_History: Mild anxiety, Iron deficiency anemia, Family_History: Mother: Thyroid disorder, Current_Medications: Sertraline 50 mg daily, Ferrous sulfate 325 mg every other day, Visit_Date: 2025-02-02, Reason_for_Visit: Headache and stress, Notes: Prepping for work exams; dull bilateral headache; no vision changes., Assessment: Tension-type headache due to stress., Plan: Encourage rest, hydration, and neck stretches; use acetaminophen as needed."
+  },
+  {
+    "id": "FAM2025-006_2023-03-15",
+    "patient_id": "FAM2025-006",
+    "text": "Patient_ID: FAM2025-006, Name: Robert Kim, Age: 39, Gender: Male, Occupation: Chef, Allergies: Shellfish (anaphylaxis), Past_Medical_History: GERD, Mild hypertension, Family_History: Mother: Hypertension; Father: Hyperlipidemia, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2023-03-15, Reason_for_Visit: Heartburn and chest discomfort, Notes: Reports burning after spicy meals; denies chest pain on exertion., Assessment: GERD exacerbation due to diet., Plan: Continue omeprazole; avoid spicy and fried foods; follow-up in 3 months."
+  },
+  {
+    "id": "FAM2025-006_2023-07-18",
+    "patient_id": "FAM2025-006",
+    "text": "Patient_ID: FAM2025-006, Name: Robert Kim, Age: 39, Gender: Male, Occupation: Chef, Allergies: Shellfish (anaphylaxis), Past_Medical_History: GERD, Mild hypertension, Family_History: Mother: Hypertension; Father: Hyperlipidemia, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2023-07-18, Reason_for_Visit: High blood pressure follow-up, Notes: BP 148/92; under stress due to long work hours., Assessment: Stage 1 hypertension., Plan: Start lisinopril 10 mg daily; monitor BP weekly; encourage stress management."
+  },
+  {
+    "id": "FAM2025-006_2024-02-05",
+    "patient_id": "FAM2025-006",
+    "text": "Patient_ID: FAM2025-006, Name: Robert Kim, Age: 39, Gender: Male, Occupation: Chef, Allergies: Shellfish (anaphylaxis), Past_Medical_History: GERD, Mild hypertension, Family_History: Mother: Hypertension; Father: Hyperlipidemia, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2024-02-05, Reason_for_Visit: Dizziness and fatigue, Notes: Skips breakfast; lightheaded in mornings., Assessment: Orthostatic symptoms due to low fluid intake., Plan: Increase hydration; monitor BP; reduce caffeine."
+  },
+  {
+    "id": "FAM2025-006_2024-11-10",
+    "patient_id": "FAM2025-006",
+    "text": "Patient_ID: FAM2025-006, Name: Robert Kim, Age: 39, Gender: Male, Occupation: Chef, Allergies: Shellfish (anaphylaxis), Past_Medical_History: GERD, Mild hypertension, Family_History: Mother: Hypertension; Father: Hyperlipidemia, Current_Medications: Omeprazole 20 mg daily, Visit_Date: 2024-11-10, Reason_for_Visit: Annual exam, Notes: Weight down 3 kg; BP 126/80; no complaints., Assessment: Hypertension well controlled., Plan: Continue current meds; encourage balanced diet."
+  },
+  {
+    "id": "FAM2025-007_2023-04-01",
+    "patient_id": "FAM2025-007",
+    "text": "Patient_ID: FAM2025-007, Name: Grace Liu, Age: 50, Gender: Female, Occupation: University professor, Allergies: Latex (rash), Past_Medical_History: Type 2 diabetes, Family_History: Father: Type 2 diabetes; Mother: Osteoarthritis, Current_Medications: Metformin 500 mg BID, Visit_Date: 2023-04-01, Reason_for_Visit: New patient consultation, Notes: Recently diagnosed diabetes; fasting glucose 142 mg/dL., Assessment: Type 2 diabetes, newly diagnosed., Plan: Start metformin; discuss low-carb diet; schedule diabetic education."
+  },
+  {
+    "id": "FAM2025-007_2023-09-09",
+    "patient_id": "FAM2025-007",
+    "text": "Patient_ID: FAM2025-007, Name: Grace Liu, Age: 50, Gender: Female, Occupation: University professor, Allergies: Latex (rash), Past_Medical_History: Type 2 diabetes, Family_History: Father: Type 2 diabetes; Mother: Osteoarthritis, Current_Medications: Metformin 500 mg BID, Visit_Date: 2023-09-09, Reason_for_Visit: Blood sugar follow-up, Notes: A1C improved to 6.7%; exercises 4x/week., Assessment: Diabetes improving., Plan: Continue metformin; maintain exercise routine; follow-up in 6 months."
+  },
+  {
+    "id": "FAM2025-007_2024-03-11",
+    "patient_id": "FAM2025-007",
+    "text": "Patient_ID: FAM2025-007, Name: Grace Liu, Age: 50, Gender: Female, Occupation: University professor, Allergies: Latex (rash), Past_Medical_History: Type 2 diabetes, Family_History: Father: Type 2 diabetes; Mother: Osteoarthritis, Current_Medications: Metformin 500 mg BID, Visit_Date: 2024-03-11, Reason_for_Visit: Tingling in feet, Notes: Describes mild numbness in toes at night., Assessment: Early diabetic neuropathy., Plan: Order nerve conduction test; add vitamin B complex; monitor symptoms."
+  },
+  {
+    "id": "FAM2025-007_2024-09-21",
+    "patient_id": "FAM2025-007",
+    "text": "Patient_ID: FAM2025-007, Name: Grace Liu, Age: 50, Gender: Female, Occupation: University professor, Allergies: Latex (rash), Past_Medical_History: Type 2 diabetes, Family_History: Father: Type 2 diabetes; Mother: Osteoarthritis, Current_Medications: Metformin 500 mg BID, Visit_Date: 2024-09-21, Reason_for_Visit: Annual physical, Notes: A1C 6.3%; stable neuropathy; reports occasional hand cramps., Assessment: Controlled diabetes; mild peripheral neuropathy., Plan: Continue regimen; encourage hydration and stretching."
+  },
+  {
+    "id": "FAM2025-008_2023-05-22",
+    "patient_id": "FAM2025-008",
+    "text": "Patient_ID: FAM2025-008, Name: Hannah Green, Age: 31, Gender: Female, Occupation: Graphic designer, Allergies: None, Past_Medical_History: Migraine headaches, Family_History: Mother: Migraines; Father: None, Current_Medications: Sumatriptan 50 mg PRN, Visit_Date: 2023-05-22, Reason_for_Visit: Headache follow-up, Notes: Reports 2 migraines/month, often triggered by bright screens., Assessment: Episodic migraine., Plan: Advise screen filters and hydration; refill sumatriptan."
+  },
+  {
+    "id": "FAM2025-008_2023-11-03",
+    "patient_id": "FAM2025-008",
+    "text": "Patient_ID: FAM2025-008, Name: Hannah Green, Age: 31, Gender: Female, Occupation: Graphic designer, Allergies: None, Past_Medical_History: Migraine headaches, Family_History: Mother: Migraines; Father: None, Current_Medications: Sumatriptan 50 mg PRN, Visit_Date: 2023-11-03, Reason_for_Visit: Frequent headaches, Notes: 5 headaches/month; stress and lack of sleep., Assessment: Chronic migraine likely stress-related., Plan: Start propranolol 20 mg BID; recommend sleep hygiene and stress management."
+  },
+  {
+    "id": "FAM2025-008_2024-04-28",
+    "patient_id": "FAM2025-008",
+    "text": "Patient_ID: FAM2025-008, Name: Hannah Green, Age: 31, Gender: Female, Occupation: Graphic designer, Allergies: None, Past_Medical_History: Migraine headaches, Family_History: Mother: Migraines; Father: None, Current_Medications: Sumatriptan 50 mg PRN, Visit_Date: 2024-04-28, Reason_for_Visit: Annual check-up, Notes: Reports fewer headaches; improved sleep., Assessment: Migraines controlled., Plan: Continue propranolol; reduce caffeine; renew prescription."
+  },
+  {
+    "id": "FAM2025-008_2025-01-08",
+    "patient_id": "FAM2025-008",
+    "text": "Patient_ID: FAM2025-008, Name: Hannah Green, Age: 31, Gender: Female, Occupation: Graphic designer, Allergies: None, Past_Medical_History: Migraine headaches, Family_History: Mother: Migraines; Father: None, Current_Medications: Sumatriptan 50 mg PRN, Visit_Date: 2025-01-08, Reason_for_Visit: Light sensitivity and fatigue, Notes: Reports mild eye strain from screen use; denies aura., Assessment: Digital eye strain; stable migraine., Plan: Blue-light glasses; take breaks; maintain hydration."
+  },
+  {
+    "id": "FAM2025-009_2023-01-23",
+    "patient_id": "FAM2025-009",
+    "text": "Patient_ID: FAM2025-009, Name: Olivia Grant, Age: 42, Gender: Female, Occupation: Librarian, Allergies: Sulfa drugs (rash), Past_Medical_History: Hypothyroidism, Family_History: Mother: Hypothyroidism; Father: None, Current_Medications: Levothyroxine 100 mcg daily, Visit_Date: 2023-01-23, Reason_for_Visit: Thyroid follow-up, Notes: Reports fatigue and mild weight gain; compliant with medication., Assessment: Suboptimal thyroid control., Plan: Increase levothyroxine to 112 mcg; recheck TSH in 8 weeks."
+  },
+  {
+    "id": "FAM2025-009_2023-08-15",
+    "patient_id": "FAM2025-009",
+    "text": "Patient_ID: FAM2025-009, Name: Olivia Grant, Age: 42, Gender: Female, Occupation: Librarian, Allergies: Sulfa drugs (rash), Past_Medical_History: Hypothyroidism, Family_History: Mother: Hypothyroidism; Father: None, Current_Medications: Levothyroxine 100 mcg daily, Visit_Date: 2023-08-15, Reason_for_Visit: Annual exam, Notes: Energy improved; normal labs; started yoga., Assessment: Hypothyroidism well controlled., Plan: Continue current dose; recheck labs in 6 months."
+  },
+  {
+    "id": "FAM2025-009_2024-03-10",
+    "patient_id": "FAM2025-009",
+    "text": "Patient_ID: FAM2025-009, Name: Olivia Grant, Age: 42, Gender: Female, Occupation: Librarian, Allergies: Sulfa drugs (rash), Past_Medical_History: Hypothyroidism, Family_History: Mother: Hypothyroidism; Father: None, Current_Medications: Levothyroxine 100 mcg daily, Visit_Date: 2024-03-10, Reason_for_Visit: Cold intolerance and hair loss, Notes: Reports fatigue, dry skin; missed several doses., Assessment: Recurrent hypothyroid symptoms due to poor adherence., Plan: Reinforce medication consistency; schedule TSH recheck."
+  },
+  {
+    "id": "FAM2025-009_2025-02-01",
+    "patient_id": "FAM2025-009",
+    "text": "Patient_ID: FAM2025-009, Name: Olivia Grant, Age: 42, Gender: Female, Occupation: Librarian, Allergies: Sulfa drugs (rash), Past_Medical_History: Hypothyroidism, Family_History: Mother: Hypothyroidism; Father: None, Current_Medications: Levothyroxine 100 mcg daily, Visit_Date: 2025-02-01, Reason_for_Visit: Medication refill, Notes: Reports stable energy; labs normal., Assessment: Stable thyroid function., Plan: Continue regimen; follow-up in 1 year."
+  },
+  {
+    "id": "FAM2025-010_2023-02-28",
+    "patient_id": "FAM2025-010",
+    "text": "Patient_ID: FAM2025-010, Name: Marcus Brown, Age: 47, Gender: Male, Occupation: Police officer, Allergies: None, Past_Medical_History: Chronic back pain, Family_History: Father: Osteoarthritis; Mother: None, Current_Medications: Ibuprofen 400 mg PRN, Visit_Date: 2023-02-28, Reason_for_Visit: Low back pain flare, Notes: Reports stiffness after long shifts., Assessment: Mechanical low back pain., Plan: Recommend stretching, heat therapy, and physical therapy referral."
+  },
+  {
+    "id": "FAM2025-010_2023-07-16",
+    "patient_id": "FAM2025-010",
+    "text": "Patient_ID: FAM2025-010, Name: Marcus Brown, Age: 47, Gender: Male, Occupation: Police officer, Allergies: None, Past_Medical_History: Chronic back pain, Family_History: Father: Osteoarthritis; Mother: None, Current_Medications: Ibuprofen 400 mg PRN, Visit_Date: 2023-07-16, Reason_for_Visit: Follow-up on physical therapy, Notes: Pain improved; resumed light gym workouts., Assessment: Back pain improving., Plan: Continue exercises; prescribe muscle relaxant as needed."
+  },
+  {
+    "id": "FAM2025-010_2024-01-11",
+    "patient_id": "FAM2025-010",
+    "text": "Patient_ID: FAM2025-010, Name: Marcus Brown, Age: 47, Gender: Male, Occupation: Police officer, Allergies: None, Past_Medical_History: Chronic back pain, Family_History: Father: Osteoarthritis; Mother: None, Current_Medications: Ibuprofen 400 mg PRN, Visit_Date: 2024-01-11, Reason_for_Visit: Annual physical, Notes: BP 132/84; back pain stable., Assessment: Healthy adult exam., Plan: Continue current regimen; maintain regular activity."
+  },
+  {
+    "id": "FAM2025-010_2024-09-02",
+    "patient_id": "FAM2025-010",
+    "text": "Patient_ID: FAM2025-010, Name: Marcus Brown, Age: 47, Gender: Male, Occupation: Police officer, Allergies: None, Past_Medical_History: Chronic back pain, Family_History: Father: Osteoarthritis; Mother: None, Current_Medications: Ibuprofen 400 mg PRN, Visit_Date: 2024-09-02, Reason_for_Visit: Fatigue and snoring, Notes: Wife reports loud snoring; daytime sleepiness., Assessment: Possible obstructive sleep apnea., Plan: Order sleep study; counsel on weight management."
+  },
+  {
+    "id": "FAM2025-011_2023-04-19",
+    "patient_id": "FAM2025-011",
+    "text": "Patient_ID: FAM2025-011, Name: Rachel Adams, Age: 35, Gender: Female, Occupation: Marketing manager, Allergies: None, Past_Medical_History: Allergic rhinitis, Family_History: Sister: Asthma; Mother: None, Current_Medications: Cetirizine 10 mg daily, Visit_Date: 2023-04-19, Reason_for_Visit: Sneezing and itchy eyes, Notes: Symptoms worse during spring., Assessment: Seasonal allergic rhinitis., Plan: Add fluticasone nasal spray; continue cetirizine; monitor response."
+  },
+  {
+    "id": "FAM2025-011_2023-10-02",
+    "patient_id": "FAM2025-011",
+    "text": "Patient_ID: FAM2025-011, Name: Rachel Adams, Age: 35, Gender: Female, Occupation: Marketing manager, Allergies: None, Past_Medical_History: Allergic rhinitis, Family_History: Sister: Asthma; Mother: None, Current_Medications: Cetirizine 10 mg daily, Visit_Date: 2023-10-02, Reason_for_Visit: Sinus pressure and headache, Notes: Nasal congestion for 2 weeks; mild sinus tenderness., Assessment: Acute sinusitis., Plan: Amoxicillin x10 days; steam inhalation; saline rinses."
+  },
+  {
+    "id": "FAM2025-011_2024-05-14",
+    "patient_id": "FAM2025-011",
+    "text": "Patient_ID: FAM2025-011, Name: Rachel Adams, Age: 35, Gender: Female, Occupation: Marketing manager, Allergies: None, Past_Medical_History: Allergic rhinitis, Family_History: Sister: Asthma; Mother: None, Current_Medications: Cetirizine 10 mg daily, Visit_Date: 2024-05-14, Reason_for_Visit: Persistent allergies, Notes: Requests allergy testing; symptoms worsen around cats., Assessment: Perennial allergic rhinitis., Plan: Refer to allergist; discuss immunotherapy options."
+  },
+  {
+    "id": "FAM2025-011_2025-01-25",
+    "patient_id": "FAM2025-011",
+    "text": "Patient_ID: FAM2025-011, Name: Rachel Adams, Age: 35, Gender: Female, Occupation: Marketing manager, Allergies: None, Past_Medical_History: Allergic rhinitis, Family_History: Sister: Asthma; Mother: None, Current_Medications: Cetirizine 10 mg daily, Visit_Date: 2025-01-25, Reason_for_Visit: Annual physical, Notes: Feels well; minimal allergy symptoms this winter., Assessment: Stable allergic rhinitis., Plan: Continue maintenance therapy; annual follow-up."
+  },
+  {
+    "id": "FAM2025-012_2023-03-07",
+    "patient_id": "FAM2025-012",
+    "text": "Patient_ID: FAM2025-012, Name: Daniel Nguyen, Age: 60, Gender: Male, Occupation: High school teacher, Allergies: None, Past_Medical_History: Hypertension, Pre-diabetes, Family_History: Father: Stroke; Mother: Type 2 diabetes, Current_Medications: Amlodipine 5 mg daily, Visit_Date: 2023-03-07, Reason_for_Visit: High blood pressure follow-up, Notes: BP 150/88; fasting glucose 112., Assessment: Hypertension not controlled; impaired fasting glucose., Plan: Increase amlodipine to 10 mg; counsel on diet and exercise."
+  },
+  {
+    "id": "FAM2025-012_2023-10-18",
+    "patient_id": "FAM2025-012",
+    "text": "Patient_ID: FAM2025-012, Name: Daniel Nguyen, Age: 60, Gender: Male, Occupation: High school teacher, Allergies: None, Past_Medical_History: Hypertension, Pre-diabetes, Family_History: Father: Stroke; Mother: Type 2 diabetes, Current_Medications: Amlodipine 5 mg daily, Visit_Date: 2023-10-18, Reason_for_Visit: Cough and sore throat, Notes: Mild dry cough; no fever; normal exam., Assessment: Viral upper respiratory infection., Plan: Supportive care; fluids and rest."
+  },
+  {
+    "id": "FAM2025-012_2024-04-03",
+    "patient_id": "FAM2025-012",
+    "text": "Patient_ID: FAM2025-012, Name: Daniel Nguyen, Age: 60, Gender: Male, Occupation: High school teacher, Allergies: None, Past_Medical_History: Hypertension, Pre-diabetes, Family_History: Father: Stroke; Mother: Type 2 diabetes, Current_Medications: Amlodipine 5 mg daily, Visit_Date: 2024-04-03, Reason_for_Visit: Annual physical, Notes: BP 128/78; weight stable; glucose 105., Assessment: Hypertension controlled; pre-diabetes improving., Plan: Continue regimen; repeat labs in 6 months."
+  },
+  {
+    "id": "FAM2025-012_2024-11-27",
+    "patient_id": "FAM2025-012",
+    "text": "Patient_ID: FAM2025-012, Name: Daniel Nguyen, Age: 60, Gender: Male, Occupation: High school teacher, Allergies: None, Past_Medical_History: Hypertension, Pre-diabetes, Family_History: Father: Stroke; Mother: Type 2 diabetes, Current_Medications: Amlodipine 5 mg daily, Visit_Date: 2024-11-27, Reason_for_Visit: Flu shot and fatigue, Notes: Mild fatigue; no other issues., Assessment: Stable chronic conditions., Plan: Administer flu vaccine; check CBC and thyroid."
+  },
+  {
+    "id": "FAM2025-013_2023-05-05",
+    "patient_id": "FAM2025-013",
+    "text": "Patient_ID: FAM2025-013, Name: Laura Stevens, Age: 29, Gender: Female, Occupation: Nurse, Allergies: None, Past_Medical_History: None, Family_History: None, Current_Medications: Prenatal vitamins, Visit_Date: 2023-05-05, Reason_for_Visit: Positive pregnancy test, Notes: Confirmed pregnancy at 6 weeks gestation., Assessment: Early pregnancy., Plan: Start prenatal vitamins; schedule OB referral."
+  },
+  {
+    "id": "FAM2025-013_2023-11-10",
+    "patient_id": "FAM2025-013",
+    "text": "Patient_ID: FAM2025-013, Name: Laura Stevens, Age: 29, Gender: Female, Occupation: Nurse, Allergies: None, Past_Medical_History: None, Family_History: None, Current_Medications: Prenatal vitamins, Visit_Date: 2023-11-10, Reason_for_Visit: 2nd trimester check, Notes: Reports occasional nausea; fetal heartbeat normal., Assessment: Normal pregnancy at 20 weeks., Plan: Continue prenatal vitamins; discuss diet and exercise."
+  },
+  {
+    "id": "FAM2025-013_2024-04-02",
+    "patient_id": "FAM2025-013",
+    "text": "Patient_ID: FAM2025-013, Name: Laura Stevens, Age: 29, Gender: Female, Occupation: Nurse, Allergies: None, Past_Medical_History: None, Family_History: None, Current_Medications: Prenatal vitamins, Visit_Date: 2024-04-02, Reason_for_Visit: Postpartum check, Notes: Delivered healthy baby girl 6 weeks ago; mild fatigue., Assessment: Postpartum recovery normal., Plan: Encourage rest and hydration; follow-up in 3 months."
+  },
+  {
+    "id": "FAM2025-013_2025-01-13",
+    "patient_id": "FAM2025-013",
+    "text": "Patient_ID: FAM2025-013, Name: Laura Stevens, Age: 29, Gender: Female, Occupation: Nurse, Allergies: None, Past_Medical_History: None, Family_History: None, Current_Medications: Prenatal vitamins, Visit_Date: 2025-01-13, Reason_for_Visit: Annual physical, Notes: Feels well; baby healthy; resumed work., Assessment: Healthy postpartum woman., Plan: Continue regular exercise and balanced diet."
+  }
+]
