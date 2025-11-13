@@ -1,191 +1,150 @@
-# Fully local RAG: EmbeddingGemma (embeddings) + FAISS (retrieval) + Llama3.1 (generation) via Ollama
-import requests, numpy as np, faiss, textwrap, datetime
-import json
+# conversational_rag.py
+# Fully local conversational RAG: EmbeddingGemma (embeddings) + FAISS (retrieval) + Llama/Gemma (generation) via Ollama
+import requests, numpy as np, faiss, textwrap, datetime, json, sys
 
 OLLAMA_URL = "http://localhost:11434"
 EMBED_MODEL = "embeddinggemma:latest"
-LLM_MODEL   = "gemma3:4b"   # change to any local generator you have
+LLM_MODEL   = "gemma3:4b"        # or "llama3.1:8b" etc.
+NUM_CTX     = 4096                # adjust to your model
+TOP_K       = 5                   # retrieved passages per turn
 
-# Open and load data the JSON file 
+# ---------- Load corpus ----------
 with open('formatted_data.json', 'r', encoding='utf-8') as f:
-    data = json.load(f)
+    DATA = json.load(f)
+TEXTS = [d["text"] for d in DATA]
 
-
-# --- 2) Helpers: call Ollama embeddings & generation ---
-def embed_texts(texts, model=EMBED_MODEL, batch_size=16):
-    """Return a numpy array of shape (N, D) for a list of strings."""
+# ---------- Embeddings ----------
+def embed_texts(texts, model=EMBED_MODEL):
     vecs = []
-    for i in range(0, len(texts), batch_size):
-        batch = texts[i:i+batch_size]
-
-        print(f"batch{i} is being processed")
-        # Ollama embeddings currently expects a single string; call per item for simplicity
-        for t in batch:
-
-            print(f"This is t: {t}")
-            
-            r = requests.post(f"{OLLAMA_URL}/api/embeddings",
-                              json={"model": model, "prompt": t}, timeout=120)
-            r.raise_for_status()
-            data = r.json()
-            emb = data.get("embedding")
-            if emb is None:
-                raise RuntimeError(f"No 'embedding' in response for text: {t[:80]}...")
-            vecs.append(emb)
+    for t in texts:
+        r = requests.post(f"{OLLAMA_URL}/api/embeddings",
+                          json={"model": model, "prompt": t},
+                          timeout=120)
+        r.raise_for_status()
+        emb = r.json().get("embedding")
+        if emb is None:
+            raise RuntimeError(f"No 'embedding' returned for: {t[:80]}")
+        vecs.append(emb)
     X = np.array(vecs, dtype="float32")
-    # Normalize for cosine similarity via inner product
+    # Normalize for inner-product cosine
     norms = np.linalg.norm(X, axis=1, keepdims=True) + 1e-12
     return X / norms
 
-def ollama_generate(prompt, model=LLM_MODEL, temperature=0.0, num_ctx=2048):
-    """Use /api/generate for simple single-turn generation."""
-    r = requests.post(f"{OLLAMA_URL}/api/generate",
-                      json={"model": model,
-                            "prompt": prompt,
-                            "options": {"temperature": temperature, "num_ctx": num_ctx},
-                            "stream": False},
-                      timeout=180)
-    r.raise_for_status()
-    return r.json().get("response", "").strip()
+# ---------- Build FAISS index once ----------
+X = embed_texts(TEXTS)
+DIM = X.shape[1]
+INDEX = faiss.IndexFlatIP(DIM)
+INDEX.add(X)
+ID2DOC = {i: DATA[i] for i in range(len(DATA))}
 
-
-
-# --- 3) Build embeddings + FAISS index ---
-texts = [d["text"] for d in data]
-X = embed_texts(texts)                # (N, D), normalized
-dim = X.shape[1]
-index = faiss.IndexFlatIP(dim)        # inner product == cosine for normalized vectors
-index.add(X)
-id2doc = {i: data[i] for i in range(len(data))}
-
-
-
-# --- 4) Retrieval ---
-def retrieve(query, k=3):
-    qv = embed_texts([query])[0].reshape(1, -1)  # single normalized query vector
-    D, I = index.search(qv, k)
-    results = []
+def retrieve(query, k=TOP_K):
+    qv = embed_texts([query])[0].reshape(1, -1)
+    D, I = INDEX.search(qv, k)
+    out = []
     for score, idx in zip(D[0], I[0]):
-        if idx == -1: 
+        if idx == -1:
             continue
-        d = id2doc[int(idx)]
-        results.append({"score": float(score), **d})
-    return results
+        d = ID2DOC[int(idx)]
+        out.append({"score": float(score), **d})
+    return out
 
-# --- 5) Build RAG prompt ---
-def build_prompt(query, ctx_docs, max_snip_len=800):
+# ---------- Prompt builder (per turn) ----------
+SYSTEM_MSG = (
+    "You are a careful clinical assistant for a family clinic.\n"
+    "Use ONLY the supplied Context for answers. If missing, say you don't know.\n"
+    "Cite sources inline like [id · patient_id]. Keep answers concise and safe."
+)
+
+def build_turn_content(user_query, ctx_docs, max_snip_len=800):
     context = "\n\n---\n".join(
         f"[{d['id']} · {d['patient_id']}]\n" + textwrap.shorten(d["text"], width=max_snip_len)
         for d in ctx_docs
     )
-    return f"""You are a careful assistant that works for a family clinic, and help up with minor diagnosises and information look up. Use ONLY the Context. If the answer is missing, say you don't know.
-Cite sources inline like [id · patient_id].
+    return (
+        "Context:\n" + context + "\n\n"
+        "Question: " + user_query + "\n"
+        "Answer:"
+    )
 
-Context:
-{context}
+# ---------- Ollama chat wrapper ----------
+def ollama_chat(messages, temperature=0.0, num_ctx=NUM_CTX):
+    """
+    messages: list of {"role": "system"|"user"|"assistant", "content": "..."}
+    """
+    r = requests.post(
+        f"{OLLAMA_URL}/api/chat",
+        json={
+            "model": LLM_MODEL,
+            "messages": messages,
+            "options": {"temperature": temperature, "num_ctx": num_ctx},
+            "stream": False
+        },
+        timeout=180
+    )
+    r.raise_for_status()
+    data = r.json()
+    # Ollama /api/chat returns {"message": {"role": "assistant", "content": "..."} , ...}
+    return data.get("message", {}).get("content", "").strip()
 
-Question: {query}
-Answer:"""
+# ---------- Chat session manager ----------
+class ConversationalRAG:
+    def __init__(self, system_msg=SYSTEM_MSG):
+        self.history = [{"role":"system", "content": system_msg}]
 
-#function that helps export queries and output into txt. file
-def run_batch_and_save(queries, k=5, out_prefix="batch_results"):
-    # Create a timestamped output file name
-    ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_path = f"{out_prefix}_{ts}.txt"
+    def ask(self, user_query):
+        # 1) retrieve fresh context for THIS turn
+        hits = retrieve(user_query, k=TOP_K)
+        turn_content = build_turn_content(user_query, hits)
 
-    with open(out_path, "w", encoding="utf-8") as f:
-        for idx, query in enumerate(queries, start=1):
-            # --- retrieval + LLM ---
-            hits = retrieve(query, k=k)
-            prompt = build_prompt(query, hits)
-            answer = ollama_generate(prompt)
+        # 2) Add ONLY the user question (not the long context) to history to keep it clean
+        self.history.append({"role":"user", "content": user_query})
 
-            # --- console output (optional) ---
-            print(f"\n=== Query {idx} ===")
-            print(f"Query: {query}")
-            print("Top hits:")
-            for h in hits:
-                print(f"- {h['id']} :: {h['patient_id']}  (score={h['score']:.3f})")
-            print("\n--- Prompt sent to LLM ---\n")
-            print(prompt)
-            print("\n--- LLM Answer ---\n")
-            print(answer)
+        # 3) Send a composite user message for this turn that includes the context + question
+        #    but do NOT store that composite in history permanently (avoids ballooning)
+        tmp_messages = self.history[:-1] + [
+            {"role":"user", "content": turn_content}
+        ]
 
-            # --- write to file ---
-            f.write(f"=== Query {idx} ===\n")
-            f.write(f"Query: {query}\n\n")
+        # 4) Chat
+        answer = ollama_chat(tmp_messages)
 
-            f.write("Top hits:\n")
-            for h in hits:
-                f.write(f"- {h['id']} :: {h['patient_id']}  (score={h['score']:.3f})\n")
+        # 5) Append just the final answer to history
+        self.history.append({"role":"assistant", "content": answer})
 
-            f.write("\n--- Prompt sent to LLM ---\n")
-            f.write(prompt + "\n\n")
+        # 6) Return answer plus the retrieved doc ids for transparency
+        citations = [(d["id"], d["patient_id"], d["score"]) for d in hits]
+        return answer, citations
 
-            f.write("--- LLM Answer ---\n")
-            f.write(str(answer) + "\n")
+    def reset(self):
+        self.history = [{"role":"system", "content": SYSTEM_MSG}]
 
-            f.write("\n" + ("=" * 60) + "\n\n")
+# ---------- Simple REPL ----------
+def run_chat():
+    chat = ConversationalRAG()
+    print("Conversational RAG ready. Type /reset or /exit.")
+    while True:
+        try:
+            q = input("\nYou: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\nBye!")
+            break
 
-    print(f"\nAll results saved to: {out_path}")
-    return out_path
+        if not q:
+            continue
+        if q.lower() in ("/exit", "/quit"):
+            print("Bye!")
+            break
+        if q.lower() == "/reset":
+            chat.reset()
+            print("(history cleared)")
+            continue
 
+        answer, cites = chat.ask(q)
+        print("\nAssistant:", answer)
+        if cites:
+            print("\nSources:")
+            for (doc_id, patient_id, score) in cites:
+                print(f"- [{doc_id} · {patient_id}]  (score={score:.3f})")
 
-#Demo run
 if __name__ == "__main__":
-    # Put your queries here
-    queries = [
-    # Direct lookups (factual)
-    "Does Emily Chen have any medication allergies?",
-    "What inhalers does Emily Chen currently use?",
-    "On 2023-12-18, why did Emily Chen visit the clinic?",
-    "What dose of lisinopril is David Morales prescribed initially?",
-    "What was David Morales’s LDL result at his 2023-12-05 visit?",
-    "What antibiotic was prescribed for Sofia Rodriguez’s sore throat on 2023-02-15?",
-    "What is Michael Turner’s documented allergy?",
-    "What medication does Aisha Patel take for anxiety, and at what dose?",
-    "Which patient has a shellfish allergy and what type of allergy?",
-    "Which patient is on metformin and why?",
-
-    # Paraphrase / synonyms
-    "Did Emily report breathing issues during allergy season?",
-    "Has David’s blood pressure management improved by 2025?",
-    "Was Sofia’s January 2025 cough likely bacterial or post-viral?",
-    "Did Michael receive guidance about weight management in late 2024?",
-    "Did Hannah’s headache frequency decrease by April 2024?",
-
-    # Date-bounded queries
-    "What were Emily Chen’s plans at the 2024-03-25 check-up?",
-    "What changes were made to David’s statin therapy on 2023-12-05?",
-    "What was the assessment for Sofia’s 2024-01-20 ear pain visit?",
-    "What was Michael’s A1C and assessment on 2024-03-02?",
-    "What interventions were recorded for Hannah on 2025-01-08?",
-
-    # Multi-hop / aggregation
-    "List all vaccines administered across these records by patient and date.",
-    "For Marcus Brown, provide me the progression of his back pain.",
-    "Which patients received antibiotics, what for, and when.",
-    "Identify all documented lifestyle recommendations (diet, exercise, sleep) by patient.",
-
-    # Negation / contrast
-    "Which patients explicitly have no documented allergies?",
-    "Did Sofia ever present with fever at the 2025-01-03 visit?",
-    "Was Hannah ever documented to have visual aura with migraines?",
-
-    # Entity & value extraction
-    "Extract all medication names and doses for Aisha across her timeline.",
-    "Pull every lab value mentioned (LDL, A1C, glucose) with dates and patients.",
-    "List all family-history conditions per patient.",
-
-    # “Find the best source chunk”
-    "Where (which note) is “exercise-induced bronchospasm” mentioned, and what plan follows it?",
-    "Find the note that contains “HEPA air filter”; which patient and visit is it?",
-    "Locate the record with “digital eye strain”; what was the plan?",
-
-    # Safety / edge cases
-    "Which patient is prescribed insulin?",
-    "Do any records mention hospitalization or ER admission?",
-    "Are there any documented medication side effects besides allergies?"
-]
-
-    run_batch_and_save(queries, k=5)
+    run_chat()
