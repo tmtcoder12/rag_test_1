@@ -1,0 +1,104 @@
+Conversational RAG ready. Type /reset or /exit.
+
+You: has emily ever reported breating issues? 
+
+Assistant: Yes, Emily has reported breathing issues. Specifically, she reported wheezing after a hiking trip [FAM2025-001_2023-06-10], and has a history of seasonal shortness of breath [FAM2025-001_2023-03-03], and a history of wheezing triggered by dust exposure [FAM2025-001_2023-06-10]. [FAM2025-001]
+
+Sources:
+- [FAM2025-001_2023-06-10 · FAM2025-001]  (score=0.497)
+- [FAM2025-001_2023-03-03 · FAM2025-001]  (score=0.492)
+- [FAM2025-001_2023-12-18 · FAM2025-001]  (score=0.482)
+- [FAM2025-001_2024-03-25 · FAM2025-001]  (score=0.457)
+- [FAM2025-001_2024-10-09 · FAM2025-001]  (score=0.439)
+
+You: do any of the patients have a shell fish allergy? 
+
+Assistant: Yes, Robert Kim (FAM2025-006) has a shellfish allergy (anaphylaxis) [FAM2025-006_2023-07-18].
+
+Sources:
+- [FAM2025-006_2023-03-15 · FAM2025-006]  (score=0.426)
+- [FAM2025-006_2024-02-05 · FAM2025-006]  (score=0.416)
+- [FAM2025-006_2024-11-10 · FAM2025-006]  (score=0.414)
+- [FAM2025-006_2023-07-18 · FAM2025-006]  (score=0.398)
+- [FAM2025-001_2024-03-25 · FAM2025-001]  (score=0.373)
+
+You: what was Grace Liu's most recent visit about? 
+
+Assistant: Grace Liu’s most recent visit was about tingling in her feet [FAM2025-007_2024-03-11].
+
+Sources:
+- [FAM2025-007_2023-04-01 · FAM2025-007]  (score=0.454)
+- [FAM2025-007_2024-09-21 · FAM2025-007]  (score=0.445)
+- [FAM2025-007_2023-09-09 · FAM2025-007]  (score=0.435)
+- [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.416)
+- [FAM2025-012_2024-11-27 · FAM2025-012]  (score=0.254)
+
+You: what did I just ask? 
+
+Assistant: Grace Liu’s most recent visit was about tingling in her feet [FAM2025-007_2024-03-11].
+
+Sources:
+- [FAM2025-001_2023-06-10 · FAM2025-001]  (score=0.204)
+- [FAM2025-001_2023-12-18 · FAM2025-001]  (score=0.198)
+- [FAM2025-012_2024-11-27 · FAM2025-012]  (score=0.197)
+- [FAM2025-012_2023-10-18 · FAM2025-012]  (score=0.193)
+- [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.187)
+
+You: Could you check on grace's most recent visit again 
+
+Assistant: Grace Liu’s most recent visit was about tingling in her feet [FAM2025-007_2024-03-11].
+
+Sources:
+- [FAM2025-007_2024-09-21 · FAM2025-007]  (score=0.399)
+- [FAM2025-007_2023-09-09 · FAM2025-007]  (score=0.396)
+- [FAM2025-007_2023-04-01 · FAM2025-007]  (score=0.395)
+- [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.379)
+- [FAM2025-013_2024-04-02 · FAM2025-013]  (score=0.336)
+
+You: when was Hannah's first visit ans what was it for? 
+
+Assistant: Hannah Green’s first visit was on 2023-04-01, and it was for a new patient consultation following a diagnosis of Type 2 diabetes [FAM2025-007_2023-04-01].
+
+Sources:
+- [FAM2025-008_2023-05-22 · FAM2025-008]  (score=0.323)
+- [FAM2025-008_2023-11-03 · FAM2025-008]  (score=0.321)
+- [FAM2025-008_2024-04-28 · FAM2025-008]  (score=0.315)
+- [FAM2025-008_2025-01-08 · FAM2025-008]  (score=0.306)
+- [FAM2025-007_2023-04-01 · FAM2025-007]  (score=0.242)
+
+You: how many patients do we have in total? 
+
+Assistant: There are 5 patients in total. [FAM2025-002, FAM2025-006, FAM2025-007, FAM2025-010]
+
+Sources:
+- [FAM2025-007_2023-04-01 · FAM2025-007]  (score=0.288)
+- [FAM2025-010_2024-09-02 · FAM2025-010]  (score=0.280)
+- [FAM2025-002_2023-12-05 · FAM2025-002]  (score=0.274)
+- [FAM2025-006_2024-02-05 · FAM2025-006]  (score=0.272)
+- [FAM2025-007_2024-09-21 · FAM2025-007]  (score=0.272)
+
+You: could you check again? there should be more than 10
+
+Assistant: There are 5 patients in total. [FAM2025-001, FAM2025-006, FAM2025-007, FAM2025-009, FAM2025-013]
+
+Sources:
+- [FAM2025-013_2023-11-10 · FAM2025-013]  (score=0.203)
+- [FAM2025-001_2023-12-18 · FAM2025-001]  (score=0.199)
+- [FAM2025-009_2024-03-10 · FAM2025-009]  (score=0.189)
+- [FAM2025-013_2024-04-02 · FAM2025-013]  (score=0.185)
+- [FAM2025-012_2023-03-07 · FAM2025-012]  (score=0.180)
+
+You: based on Grace's medical history, what are some things she should be aware of in the future? 
+
+Assistant: Based on Grace Liu’s medical history, she should be aware of the following in the future:
+
+*   **Diabetic Neuropathy:** She has a history of early diabetic neuropathy, and should monitor for symptoms like tingling or numbness in her feet and toes. [FAM2025-007_2024-03-11]
+*   **Blood Sugar Monitoring:** Maintaining stable blood sugar levels is crucial to prevent further nerve damage. [FAM2025-007_2024-03-11]
+*   **Medication Adherence:** Continue taking her metformin as prescribed. [FAM2025-007_2023-09-09]
+
+Sources:
+- [FAM2025-007_2024-09-21 · FAM2025-007]  (score=0.512)
+- [FAM2025-007_2023-04-01 · FAM2025-007]  (score=0.495)
+- [FAM2025-007_2023-09-09 · FAM2025-007]  (score=0.470)
+- [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.466)
+- [FAM2025-008_2025-01-08 · FAM2025-008]  (score=0.378)
