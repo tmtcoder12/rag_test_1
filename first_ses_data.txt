@@ -41,7 +41,7 @@ Sources:
 - [FAM2025-012_2024-11-27 · FAM2025-012]  (score=0.254)
 
 [DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: 
-The output is wrong. The answer should've been retrieved from [FAM2025-007_2024-09-21], but gave information from [FAM2025-007_2024-03-11].
+The output is wrong. The answer should've been retrieved from [FAM2025-007_2023-04-01], but gave information from [FAM2025-007_2024-03-11].
 The correct context is provided to the LLM, but the LLM didn't choose it. (I wonder why?)
 
 You: what did I just ask? 
