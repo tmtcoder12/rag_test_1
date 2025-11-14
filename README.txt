@@ -14,13 +14,13 @@ may RAG systems don't involve structured data.
 Hardware and RAG Architechture: 
 
 Hardware: 
-Using a RTX 5090 (32 VRAM) via GPU rental by Vast.ai. 
+Using an Apple M4 studio (36 gb unified ram). 
 
 Architechture: 
-Embedding Model: Qwen3-embedding-4b
+Embedding Model: embeddinggemma:300m
 Vector DB: FAISS
 Retrieval Algorithm: IndexFlatIP (inner product, cosine for normalized vectors), via FAISS library 
-LLM: GPT-oss 20b 
+LLM: gemma3:4b
 
 
 Questions that I will be asking:
