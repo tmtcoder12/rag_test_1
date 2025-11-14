@@ -11,6 +11,10 @@ Sources:
 - [FAM2025-001_2024-03-25 · FAM2025-001]  (score=0.457)
 - [FAM2025-001_2024-10-09 · FAM2025-001]  (score=0.439)
 
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: 
+yes, emily had reported wheezing after hiking trip. yes, she had has seasonal shortenss of breath, but we are not sure if she has a history of it.
+yes, she has had wheezing during her hiking trip, but we don't know if she has had a history of it and the "Assessment" reports that the wheexing was triggered by dust. she didnt report that herself.
+
 You: do any of the patients have a shell fish allergy? 
 
 Assistant: Yes, Robert Kim (FAM2025-006) has a shellfish allergy (anaphylaxis) [FAM2025-006_2023-07-18].
@@ -21,6 +25,9 @@ Sources:
 - [FAM2025-006_2024-11-10 · FAM2025-006]  (score=0.414)
 - [FAM2025-006_2023-07-18 · FAM2025-006]  (score=0.398)
 - [FAM2025-001_2024-03-25 · FAM2025-001]  (score=0.373)
+
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: 
+This is correct.
 
 You: what was Grace Liu's most recent visit about? 
 
@@ -33,6 +40,10 @@ Sources:
 - [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.416)
 - [FAM2025-012_2024-11-27 · FAM2025-012]  (score=0.254)
 
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: 
+The output is wrong. The answer should've been retrieved from [FAM2025-007_2024-09-21], but gave information from [FAM2025-007_2024-03-11].
+The correct context is provided to the LLM, but the LLM didn't choose it. (I wonder why?)
+
 You: what did I just ask? 
 
 Assistant: Grace Liu’s most recent visit was about tingling in her feet [FAM2025-007_2024-03-11].
@@ -43,6 +54,9 @@ Sources:
 - [FAM2025-012_2024-11-27 · FAM2025-012]  (score=0.197)
 - [FAM2025-012_2023-10-18 · FAM2025-012]  (score=0.193)
 - [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.187)
+
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]:
+I followed up on the question and still was wrong
 
 You: Could you check on grace's most recent visit again 
 
@@ -55,6 +69,9 @@ Sources:
 - [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.379)
 - [FAM2025-013_2024-04-02 · FAM2025-013]  (score=0.336)
 
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]:
+I tried another prompt to ask for grace's most recent visit, but it was wrong again. Once again the right context was provided to the LLM. It also had the highest similarity score, but for some reason the LLM didn't choose the correct answer.
+
 You: when was Hannah's first visit ans what was it for? 
 
 Assistant: Hannah Green’s first visit was on 2023-04-01, and it was for a new patient consultation following a diagnosis of Type 2 diabetes [FAM2025-007_2023-04-01].
@@ -65,6 +82,9 @@ Sources:
 - [FAM2025-008_2024-04-28 · FAM2025-008]  (score=0.315)
 - [FAM2025-008_2025-01-08 · FAM2025-008]  (score=0.306)
 - [FAM2025-007_2023-04-01 · FAM2025-007]  (score=0.242)
+
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: This is wrong. Should be [FAM2025-008_2023-05-22]. It's weird, that piece of info was the highest ranked for similarity, but the least similar answer was picked.
+Maybe this has to do with the LLM and not the retrieval algo 
 
 You: how many patients do we have in total? 
 
@@ -77,6 +97,8 @@ Sources:
 - [FAM2025-006_2024-02-05 · FAM2025-006]  (score=0.272)
 - [FAM2025-007_2024-09-21 · FAM2025-007]  (score=0.272)
 
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: This answer is wrong. It should be 12, but I believe it is because the k varaible in the source code is set as 5
+
 You: could you check again? there should be more than 10
 
 Assistant: There are 5 patients in total. [FAM2025-001, FAM2025-006, FAM2025-007, FAM2025-009, FAM2025-013]
@@ -87,6 +109,8 @@ Sources:
 - [FAM2025-009_2024-03-10 · FAM2025-009]  (score=0.189)
 - [FAM2025-013_2024-04-02 · FAM2025-013]  (score=0.185)
 - [FAM2025-012_2023-03-07 · FAM2025-012]  (score=0.180)
+
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: This is wrong. Most likely because of the smae reason as the above query
 
 You: based on Grace's medical history, what are some things she should be aware of in the future? 
 
@@ -102,3 +126,5 @@ Sources:
 - [FAM2025-007_2023-09-09 · FAM2025-007]  (score=0.470)
 - [FAM2025-007_2024-03-11 · FAM2025-007]  (score=0.466)
 - [FAM2025-008_2025-01-08 · FAM2025-008]  (score=0.378)
+
+[DEVELOPER NOTES, QUERY OUTPUT VALIDATION, AND RETRIEVAL NOTES]: Yes correct. 
