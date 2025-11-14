@@ -1,0 +1,64 @@
+You: provide me emily's past medical history 
+
+Assistant: Mild asthma, seasonal allergies, Mother: Type 2 diabetes; Father: Hypertension [FAM2025-001_2023-03-03], [FAM2025-001_2023-06-10], [FAM2025-001_2024-03-25], [FAM2025-001_2024-10-09]
+
+Sources:
+- [FAM2025-001_2023-12-18 · FAM2025-001]  (score=0.571)
+- [FAM2025-001_2024-03-25 · FAM2025-001]  (score=0.537)
+- [FAM2025-001_2024-10-09 · FAM2025-001]  (score=0.536)
+- [FAM2025-001_2023-03-03 · FAM2025-001]  (score=0.528)
+- [FAM2025-001_2023-06-10 · FAM2025-001]  (score=0.492)
+
+You: provide me a summary of all of emily's visits 
+
+Assistant: Here’s a summary of Emily Chen’s visits:
+
+*   **2023-12-18:** Fatigue and poor sleep. Assessment: Sleep deprivation; rule out iron deficiency. Plan: Order CBC, iron, and thyroid tests; counsel on sleep hygiene; limit caffeine after noon.
+*   **2023-03-03:** Annual physical. Assessment: Mild persistent asthma; overall good control. Plan: Continue montelukast nightly; renew albuterol inhaler; advise use of HEPA air filter at home; schedule spirometry next visit.
+*   **2024-03-25:** Annual check-up. Assessment: Stable asthma; mild atopic dermatitis. Plan: Continue montelukast; prescribe low-potency steroid cream for eczema.
+*   **2024-10-09:** Flu shot and medication refill. Assessment: Asthma controlled. Plan: Administer flu vaccine; renew prescriptions; schedule next annual visit.
+*   **2023-06-10:** Wheezing after hiking trip. Assessment: Exercise-induced bronchospasm triggered by dust exposure. Plan: Add budesonide inhaler for 2 weeks; advise pre-exercise albuterol use; wear mask in dusty areas.
+
+Sources:
+- [FAM2025-001_2023-12-18 · FAM2025-001]  (score=0.404)
+- [FAM2025-001_2023-03-03 · FAM2025-001]  (score=0.392)
+- [FAM2025-001_2024-03-25 · FAM2025-001]  (score=0.390)
+- [FAM2025-001_2024-10-09 · FAM2025-001]  (score=0.389)
+- [FAM2025-001_2023-06-10 · FAM2025-001]  (score=0.344)
+
+You: based on emily's visit history, should she be concerned about any future health complications? 
+
+Assistant: Yes, based on Emily’s visit history, she should be concerned about potential future complications related to her asthma and allergies. Specifically, her history of exercise-induced bronchospasm suggests a continued risk during outdoor activities, particularly in dusty environments. [FAM2025-001_2023-06-10]
+
+Sources:
+- [FAM2025-001_2023-03-03 · FAM2025-001]  (score=0.510)
+- [FAM2025-001_2023-12-18 · FAM2025-001]  (score=0.508)
+- [FAM2025-001_2024-10-09 · FAM2025-001]  (score=0.490)
+- [FAM2025-001_2024-03-25 · FAM2025-001]  (score=0.482)
+- [FAM2025-001_2023-06-10 · FAM2025-001]  (score=0.467)
+
+You: could you provide me a summary of all of laura's visits?                          
+
+Assistant: Here’s a summary of Laura Stevens’ visits:
+
+*   **2023-08-15:** Annual exam. Assessment: Hypothyroidism well controlled. Plan: Continue current dose; recheck labs in 6 months. [FAM2025-009_2023-08-15]
+*   **2023-05-05:** Positive pregnancy test. Assessment: Early pregnancy. Plan: Start prenatal vitamins; schedule OB referral. [FAM2025-009_2023-05-05]
+*   **2023-08-15:** Annual check-up. Assessment: Hypothyroidism well controlled. Plan: Continue current dose; recheck labs in 6 months. [FAM2025-009_2023-08-15]
+
+Sources:
+- [FAM2025-013_2025-01-13 · FAM2025-013]  (score=0.402)
+- [FAM2025-013_2024-04-02 · FAM2025-013]  (score=0.394)
+- [FAM2025-013_2023-11-10 · FAM2025-013]  (score=0.392)
+- [FAM2025-013_2023-05-05 · FAM2025-013]  (score=0.379)
+- [FAM2025-009_2023-08-15 · FAM2025-009]  (score=0.299)
+
+You: Daniel's current blood pressure is 150/80, does he have a history of high blood pressure? 
+
+Assistant: Yes, Daniel Nguyen has a history of high blood pressure. [FAM2025-012_2023-03-07] and [FAM2025-012_2024-11-27] document his hypertension.
+
+Sources:
+- [FAM2025-012_2023-03-07 · FAM2025-012]  (score=0.601)
+- [FAM2025-012_2024-04-03 · FAM2025-012]  (score=0.584)
+- [FAM2025-002_2023-01-09 · FAM2025-002]  (score=0.525)
+- [FAM2025-012_2024-11-27 · FAM2025-012]  (score=0.516)
+- [FAM2025-006_2023-07-18 · FAM2025-006]  (score=0.477)
